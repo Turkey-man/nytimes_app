@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dra-dn-T7S">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites View Controller-->
+        <scene sceneID="HsG-gP-Axe">
+            <objects>
+                <viewController id="msb-pk-26B" customClass="FavoritesViewController" customModule="NYTimesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5BE-UF-4oW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KBp-O6-fyY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="msb-pk-26B" id="R2X-ew-Jhr"/>
+                                    <outlet property="delegate" destination="msb-pk-26B" id="GNn-69-CaZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KBp-O6-fyY" firstAttribute="leading" secondItem="ej6-O7-q5r" secondAttribute="leading" id="DDW-YQ-1iT"/>
+                            <constraint firstItem="KBp-O6-fyY" firstAttribute="top" secondItem="ej6-O7-q5r" secondAttribute="top" id="EQr-ub-5zN"/>
+                            <constraint firstItem="KBp-O6-fyY" firstAttribute="trailing" secondItem="ej6-O7-q5r" secondAttribute="trailing" id="dqK-iA-gtC"/>
+                            <constraint firstItem="KBp-O6-fyY" firstAttribute="bottom" secondItem="ej6-O7-q5r" secondAttribute="bottom" id="pQj-GG-Jci"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ej6-O7-q5r"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NE0-Dh-cgN"/>
+                    <connections>
+                        <outlet property="tableView" destination="KBp-O6-fyY" id="cgq-vj-Wbd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5N-ps-cTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2260.8695652173915" y="875.89285714285711"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="27e-4s-ciS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="dra-dn-T7S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" selectedImage="star.fill" id="lUW-dc-dil"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Znf-z1-QWI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="msb-pk-26B" kind="relationship" relationship="rootViewController" id="J63-0V-mgU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hk9-nX-Wp9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350.7246376811595" y="875.89285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="64" height="58"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
+    </resources>
+</document>

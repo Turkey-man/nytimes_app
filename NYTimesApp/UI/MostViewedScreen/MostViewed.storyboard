@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LJK-gA-8jT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Most Viewed View Controller-->
+        <scene sceneID="ilp-9s-nhB">
+            <objects>
+                <viewController id="SJK-0e-jRi" customClass="MostViewedViewController" customModule="NYTimesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OUj-Co-619">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ulu-JS-X6p">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SJK-0e-jRi" id="WQv-pR-RUI"/>
+                                    <outlet property="delegate" destination="SJK-0e-jRi" id="Glb-Br-ha5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ulu-JS-X6p" firstAttribute="top" secondItem="7Ad-Bo-8qN" secondAttribute="top" id="BhH-By-Op2"/>
+                            <constraint firstItem="Ulu-JS-X6p" firstAttribute="trailing" secondItem="7Ad-Bo-8qN" secondAttribute="trailing" id="aYT-E7-8ki"/>
+                            <constraint firstItem="Ulu-JS-X6p" firstAttribute="leading" secondItem="7Ad-Bo-8qN" secondAttribute="leading" id="rna-Y7-zqO"/>
+                            <constraint firstItem="Ulu-JS-X6p" firstAttribute="bottom" secondItem="7Ad-Bo-8qN" secondAttribute="bottom" id="yXd-Qk-osa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Ad-Bo-8qN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PUr-4U-J6M"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ulu-JS-X6p" id="XSH-hz-pBE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rta-Pj-SQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2315.9420289855075" y="150"/>
+        </scene>
+        <!--Most viewed-->
+        <scene sceneID="yWT-G2-pC0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LJK-gA-8jT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Most viewed" image="eye" catalog="system" selectedImage="eye.fill" id="Fn5-bJ-S0i"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NMa-8D-A7Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SJK-0e-jRi" kind="relationship" relationship="rootViewController" id="j39-lZ-kw1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xu-gk-GYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1405.7971014492755" y="150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eye" catalog="system" width="64" height="40"/>
+        <image name="eye.fill" catalog="system" width="64" height="38"/>
+    </resources>
+</document>
